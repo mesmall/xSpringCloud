@@ -9,6 +9,8 @@
 .idea
 *.iml
 .mvn
+mvnw
+mvnw.cmd
 target
 
 # log Files
