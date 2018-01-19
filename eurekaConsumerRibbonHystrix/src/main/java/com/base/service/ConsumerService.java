@@ -1,4 +1,4 @@
-package com.eurekaConsumerRibbonHystrix;
+package com.base.service;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +21,7 @@ public class ConsumerService {
         return restTemplate.getForObject("http://eureka-client/dc", String.class);
     }
     public String fallback() {
-        System.out.println("fallback:"+new Date().getDate());
+        System.out.println("fallback:"+new Date().getDate()+":");
         return "fallback";
     }
 

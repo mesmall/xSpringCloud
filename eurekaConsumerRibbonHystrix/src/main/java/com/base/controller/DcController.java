@@ -1,10 +1,11 @@
-package com.eurekaConsumerRibbonHystrix;
+package com.base.controller;
 
 
+import com.base.service.ConsumerService;
+import com.base.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
 
 /**
  * Created by lizhen on 2017/12/18.
@@ -33,11 +34,12 @@ public class DcController {
     }
 
     @GetMapping("/login")
-    public String login(){
+    public String login() {
         return loginService.login();
     }
+
     @GetMapping("/logout")
-    public String logout(){
+    public String logout() {
         return loginService.logout();
     }
 
